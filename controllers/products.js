@@ -1,4 +1,3 @@
-// const products = [];
 const Product = require('../models/products');
 
 exports.getAddProduct = (req, res, next) => {
