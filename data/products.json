@@ -1,1 +1,16 @@
-[{"title":"Ifa Yoruba"},{"title":"The Back Callers"},{"title":"Call Back Time"}]
+[
+  {
+    "id": "2287675",
+    "title": "A New Book",
+    "imageUrl": "",
+    "price": "27.99",
+    "description": "Test this new book!"
+  },
+  {
+    "id": "2288890",
+    "title": "Afunja Igi Iroko",
+    "imageUrl": "",
+    "price": "58.99",
+    "description": "Book by Flame about African Funk & Jazz."
+  }
+]
