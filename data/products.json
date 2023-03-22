@@ -1,16 +1,1 @@
-[
-  {
-    "id": "2287675",
-    "title": "A New Book",
-    "imageUrl": "",
-    "price": "27.99",
-    "description": "Test this new book!"
-  },
-  {
-    "id": "2288890",
-    "title": "Afunja Igi Iroko",
-    "imageUrl": "",
-    "price": "58.99",
-    "description": "Book by Flame about African Funk & Jazz."
-  }
-]
+[{"title":"A Beautiful New Earth","imageUrl":"","price":"78.99","description":"By Biola Idowu.","id":"0.8589242803346351"},{"title":"Timeless Universe","imageUrl":"","price":"43.98","description":"By Claudette Esprit.","id":"0.1584722210155538"},{"title":"The Picasso Expireince","imageUrl":"","price":"58.99","description":"By Obi Okigbo.","id":"0.49870761616992043"}]

@@ -1,12 +1,25 @@
 <%- include('../includes/head.ejs') %>
-<link rel="stylesheet" href="/css/forms.css">
 <link rel="stylesheet" href="/css/product.css">
 </head>
 
 <body>
   <%- include('../includes/navigation.ejs') %>
 
-  <main>
+  <main class="centered">
     <h1><%= pageTitle %></h1>
+    <div class="grid">
+      <article class="card product-item">
+        <h1 class="product__title"><%= product.title %></h1>
+        <hr />
+        <div class="card__image">
+          <img src="/img/book.jpeg" alt="<%= product.title %>" />
+        </div>
+        <h2>$ <%= product.price %></h2>
+        <p><%= product.description %></p>
+        <div class="card__actions">
+          <%- include('../includes/add-to-cart.ejs') %>
+        </div>
+      </article>
+    </div>
   </main>
   <%- include('../includes/end.ejs') %>
