@@ -1,16 +1,16 @@
 const Product = require('../models/product');
 
 exports.getProducts = (req, res, next) => {
-  Product.findAll()
+  Product.fetchAll()
     .then(products => {
       res.render('shop/product-list', {
         prods: products,
-        pageTitle: 'All Products',
+        pageTitle: 'Products',
         path: '/products',
       });
     })
     .catch(err => {
-      console.log()(err);
+      console.log(err);
     });
 };
 
@@ -21,11 +21,10 @@ exports.getProduct = (req, res, next) => {
   //     res.render('shop/product-detail', {
   //       product: products[0],
   //       pageTitle: products[0].title,
-  //       path: '/products',
+  //       path: '/products'
   //     });
   //   })
   //   .catch(err => console.log(err));
-
   Product.findByPk(prodId)
     .then(product => {
       res.render('shop/product-detail', {
@@ -38,7 +37,7 @@ exports.getProduct = (req, res, next) => {
 };
 
 exports.getIndex = (req, res, next) => {
-  Product.findAll()
+  Product.fetchAll()
     .then(products => {
       res.render('shop/index', {
         prods: products,
@@ -47,7 +46,7 @@ exports.getIndex = (req, res, next) => {
       });
     })
     .catch(err => {
-      console.log()(err);
+      console.log(err);
     });
 };
 
@@ -132,7 +131,7 @@ exports.postOrder = (req, res, next) => {
       return req.user
         .createOrder()
         .then(order => {
-          order.addProducts(
+          return order.addProducts(
             products.map(product => {
               product.orderItem = { quantity: product.cartItem.quantity };
               return product;
